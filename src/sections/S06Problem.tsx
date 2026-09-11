@@ -17,7 +17,7 @@ export function S06Problem({ step, active }: { step: number; active: boolean }) 
           className="mb-5 inline-flex w-fit items-center gap-3 rounded-full bg-white/14 px-5 py-2 backdrop-blur"
         >
           <span className="h-2 w-2 rounded-full bg-brand-sky" />
-          <span className="text-[13px] font-bold uppercase tracking-armor text-white/90">02 — The problem</span>
+          <span className="text-[13px] font-bold uppercase tracking-armor text-white/90">02 · The problem</span>
         </motion.div>
 
         <motion.h2
@@ -33,7 +33,7 @@ export function S06Problem({ step, active }: { step: number; active: boolean }) 
 
         <Reveal when={step >= 1} className="mt-8">
           <div className="max-w-[620px] text-[21px] font-medium leading-relaxed text-white/85">
-            A problem is reported. Somewhere in thousands of archived issues, the same problem was already solved —
+            A problem is reported. Somewhere in thousands of archived issues, the same problem was already solved,
             with a root cause and a proven action plan attached.
           </div>
         </Reveal>

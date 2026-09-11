@@ -9,7 +9,7 @@ export function S03Lean({ step }: { step: number; active: boolean }) {
       <Blobs variant="c" />
       <div className="relative">
         <TitleBlock
-          kicker="01 — Context"
+          kicker="01 · Context"
           title="It starts with Lean"
           lead={
             <>
@@ -47,7 +47,7 @@ export function S03Lean({ step }: { step: number; active: boolean }) {
         <Reveal when={step >= 2} className="mt-12">
           <div className="grid grid-cols-3 gap-5">
             {[
-              { t: 'Gemba', d: 'The real place — where the work actually happens.', c: 'bg-brand-blue' },
+              { t: 'Gemba', d: 'The real place, where the work actually happens.', c: 'bg-brand-blue' },
               { t: 'Gemba Walk', d: 'Go and see the problem yourself, with the team.', c: 'bg-brand-violet' },
               { t: 'Continuous improvement', d: 'Every problem solved becomes a standard.', c: 'bg-brand-sky' },
             ].map((c) => (

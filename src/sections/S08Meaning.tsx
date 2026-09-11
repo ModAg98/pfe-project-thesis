@@ -55,7 +55,7 @@ export function S08Meaning({ step }: { step: number; active: boolean }) {
     <Section>
       <Blobs variant="a" />
       <div className="relative">
-        <TitleBlock kicker="03 — The idea" title="What if the system searched by meaning?" size="md" />
+        <TitleBlock kicker="03 · The idea" title="What if the system searched by meaning?" size="md" />
       </div>
 
       <div className="relative mt-7 grid grid-cols-2 gap-6">

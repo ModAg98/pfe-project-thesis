@@ -16,11 +16,11 @@ export function S05Gemba({ step, active }: { step: number; active: boolean }) {
           />
         </div>
         <TitleBlock
-          kicker="01 — Context"
+          kicker="01 · Context"
           title="Go and see: the Gemba Walk"
           lead={
             <>
-              A manager walks the floor and records what they see — not as free text, but as a{' '}
+              A manager walks the floor and records what they see, not as free text but as a{' '}
               <Term>structured 5W2H statement</Term>.
             </>
           }
@@ -30,7 +30,7 @@ export function S05Gemba({ step, active }: { step: number; active: boolean }) {
 
       <div className="relative mt-6 grid min-h-0 flex-1 grid-cols-[1.05fr_1fr] gap-12">
         <div className="flex flex-col justify-center">
-          <AppFrame label="Gemba Walk Assistant — capturing an issue">
+          <AppFrame label="Gemba Walk Assistant · capturing an issue">
             <Clip src={assets.clips.capture} active={active} className="aspect-[900/506] w-full" rounded="" />
           </AppFrame>
         </div>
@@ -90,7 +90,7 @@ export function S05Gemba({ step, active }: { step: number; active: boolean }) {
           <Reveal when={step >= 3}>
             <div className="rounded-2xl bg-brand-grad px-6 py-5 text-white shadow-pop">
               <div className="text-[19px] font-extrabold leading-snug">
-                Solved issues stay on the board — with the root cause, the solution and the actions that worked.
+                Solved issues stay on the board, with the root cause, the solution and the actions that worked.
               </div>
             </div>
           </Reveal>

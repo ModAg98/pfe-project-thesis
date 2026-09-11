@@ -15,7 +15,7 @@ export function S07Cost({ step }: { step: number; active: boolean }) {
     <Section tone="soft">
       <Blobs variant="b" />
       <div className="relative">
-        <TitleBlock kicker="02 — The problem" title="What manual search really costs" size="md" />
+        <TitleBlock kicker="02 · The problem" title="What manual search really costs" size="md" />
       </div>
 
       <div className="relative mt-5 grid min-h-0 flex-1 grid-cols-[1fr_1.02fr] items-center gap-12">

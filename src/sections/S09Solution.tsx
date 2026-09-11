@@ -9,21 +9,21 @@ const steps = [
     title: 'The problem is described once',
     body: 'The operator fills the 5W2H on the spot, exactly as they do today. Nothing new to learn.',
     clip: assets.clips.capture,
-    label: 'Gemba Walk Assistant — reporting an issue',
+    label: 'Gemba Walk Assistant · reporting an issue',
     tone: 'blue',
   },
   {
     n: '02', verb: 'Find',
     title: 'One click finds what happened before',
-    body: 'The system compares this issue to the whole history — by meaning, field by field — and ranks what matches.',
+    body: 'The system compares this issue to the whole history, by meaning, field by field, and ranks what matches.',
     clip: assets.clips.search,
-    label: 'Similar issues — 5W2H similarity search',
+    label: 'Similar issues · 5W2H similarity search',
     tone: 'violet',
   },
   {
     n: '03', verb: 'Reuse',
     title: 'It hands back what actually worked',
-    body: 'Root causes, proven solutions and a ready action plan — each line traced to the issue it came from.',
+    body: 'Root causes, proven solutions and a ready action plan, each line traced to the issue it came from.',
     clip: assets.clips.reuse,
     label: 'AI summary and consolidated action plan',
     tone: 'sky',
@@ -48,7 +48,7 @@ export function S09Solution({ step, active }: { step: number; active: boolean })
 
       <div className="relative flex items-end justify-between gap-8">
         <TitleBlock
-          kicker="03 — The solution"
+          kicker="03 · The solution"
           title={step === 0 ? 'Turn the archive into an answer' : step >= 4 ? 'Three steps, inside the tool they already use' : cur.title}
           size="md"
         />

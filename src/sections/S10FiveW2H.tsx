@@ -15,7 +15,7 @@ export function S10FiveW2H({ step }: { step: number; active: boolean }) {
       <Blobs variant="a" />
       <div className="relative">
         <TitleBlock
-          kicker="04 — What makes it different"
+          kicker="04 · What makes it different"
           title="A problem is not a paragraph. It has structure."
           lead={
             <>
@@ -88,7 +88,7 @@ export function S10FiveW2H({ step }: { step: number; active: boolean }) {
               <div className="text-[22px] font-extrabold text-brand-navy">Dates and counts are not text.</div>
               <p className="mt-2.5 text-[16px] leading-relaxed text-ink-500">
                 Two dates a day apart look nothing alike as strings. <em>When</em> decays over time,{' '}
-                <em>How many</em> compares as a ratio — 1 000 vs 1 002 is a near-match, 10 vs 12 is not.
+                <em>How many</em> compares as a ratio: 1 000 vs 1 002 is a near-match, 10 vs 12 is not.
               </p>
             </div>
           </Reveal>
@@ -97,8 +97,8 @@ export function S10FiveW2H({ step }: { step: number; active: boolean }) {
             <div className="rounded-2xl bg-brand-grad px-7 py-6 text-white shadow-pop">
               <div className="text-[13px] font-bold uppercase tracking-armor text-white/75">Result</div>
               <div className="mt-2 text-[21px] font-extrabold leading-snug">
-                The system can say <span className="underline decoration-white/40">why</span> two problems match —
-                field by field — not just hand over a number.
+                The system can say <span className="underline decoration-white/40">why</span> two problems match,
+                field by field, not just hand over a number.
               </div>
             </div>
           </Reveal>

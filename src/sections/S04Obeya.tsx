@@ -9,9 +9,9 @@ export function S04Obeya({ step }: { step: number; active: boolean }) {
       <Blobs variant="a" />
       <div className="relative">
         <TitleBlock
-          kicker="01 — Context"
+          kicker="01 · Context"
           title="Obeya: the room where the work is visible"
-          lead="Born at Toyota — bring every expert into one room, put the work on the walls, decide together."
+          lead="Born at Toyota: bring every expert into one room, put the work on the walls, decide together."
           size="md"
         />
       </div>

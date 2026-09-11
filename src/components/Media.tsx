@@ -4,7 +4,7 @@ import { EASE } from './primitives'
 
 /**
  * A video framed like a device screen. Autoplays muted (so browsers allow it),
- * loops, and can be paused/replayed by clicking — which is all a presenter needs.
+ * loops, and can be paused/replayed by clicking, which is all a presenter needs.
  */
 export function Clip({
   src,
@@ -16,7 +16,7 @@ export function Clip({
   onEnded,
 }: {
   src: string
-  /** When false the clip pauses and rewinds — used to stop off-screen sections. */
+  /** When false the clip pauses and rewinds, used to stop off-screen sections. */
   active?: boolean
   loop?: boolean
   className?: string
@@ -101,7 +101,7 @@ export function AppFrame({
   )
 }
 
-/** Soft decorative blobs — adds warmth without noise. */
+/** Soft decorative blobs: adds warmth without noise. */
 export function Blobs({ variant = 'a' }: { variant?: 'a' | 'b' | 'c' }) {
   const sets = {
     a: [

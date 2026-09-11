@@ -11,9 +11,9 @@ export function S11Grounded({ step }: { step: number; active: boolean }) {
       <Blobs variant="b" />
       <div className="relative">
         <TitleBlock
-          kicker="04 — What makes it different"
+          kicker="04 · What makes it different"
           title="The AI writes. It never decides."
-          lead="Every proposed action already exists on a retrieved issue — and says which one."
+          lead="Every proposed action already exists on a retrieved issue, and says which one."
           size="md"
         />
       </div>
@@ -22,7 +22,7 @@ export function S11Grounded({ step }: { step: number; active: boolean }) {
         <div className="flex flex-col justify-center gap-2">
           {[
             { t: 'Retrieved historical issues', d: 'Root causes · solutions · actions', c: 'bg-brand-blue', on: true },
-            { t: 'Consolidated by code', d: 'Merged, ordered, de-duplicated — deterministic', c: 'bg-brand-violet', on: step >= 1 },
+            { t: 'Consolidated by code', d: 'Merged, ordered, de-duplicated. Deterministic', c: 'bg-brand-violet', on: step >= 1 },
             { t: 'Proposed action plan', d: 'Created as real iObeya Actions in one click', c: 'bg-brand-sky', on: step >= 1 },
           ].map((b, i) => (
             <div key={b.t}>

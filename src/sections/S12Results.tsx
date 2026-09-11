@@ -16,7 +16,7 @@ export function S12Results({ step }: { step: number; active: boolean }) {
     <Section>
       <Blobs variant="c" />
       <div className="relative">
-        <TitleBlock kicker="05 — Results" title="Does it actually work?" size="md" />
+        <TitleBlock kicker="05 · Results" title="Does it actually work?" size="md" />
       </div>
 
       <div className="relative mt-5 grid grid-cols-4 gap-4">

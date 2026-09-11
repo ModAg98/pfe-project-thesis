@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- *  EDIT EVERYTHING HERE — names, assets, numbers, wording.
+ *  EDIT EVERYTHING HERE: names, assets, numbers, wording.
  *  Every figure below comes from the PFE report; nothing is invented.
  * ============================================================================
  */
@@ -55,14 +55,39 @@ export const clientLogos = [
   { name: 'Renault', src: '/assets/client-renault.png' },
 ]
 
-export const techStack = [
-  { name: 'Python', src: '/assets/tech/python.png' },
-  { name: 'Flask', src: '/assets/tech/flask.png' },
-  { name: 'PostgreSQL', src: '/assets/tech/postgresql.png' },
-  { name: 'Hugging Face', src: '/assets/tech/huggingface.png' },
-  { name: 'Vue.js', src: '/assets/tech/vuejs.png' },
-  { name: 'Node.js', src: '/assets/tech/nodejs.png' },
-  { name: 'Docker', src: '/assets/tech/docker.png' },
+/** Report, Table 4.2: every technology, its version and its role. Grouped by the layer it lives in. */
+export type Tech = { name: string; version?: string; role: string; src: string }
+export const techStack: { group: string; items: Tech[] }[] = [
+  {
+    group: 'AI similarity service',
+    items: [
+      { name: 'Python', version: '3.10', role: 'Language of the AI microservice', src: '/assets/tech/python.png' },
+      { name: 'Flask', version: '3.0', role: 'REST API of the microservice', src: '/assets/tech/flask.png' },
+      { name: 'sentence-transformers', version: 'all-MiniLM-L6-v2', role: 'Default embedding model: free, offline, on CPU', src: '/assets/tech/huggingface.png' },
+      { name: 'OpenAI API', version: 'optional', role: 'Higher-quality embeddings, opt-in only', src: '/assets/tech/openai.png' },
+    ],
+  },
+  {
+    group: 'Data',
+    items: [
+      { name: 'PostgreSQL + pgvector', version: '16', role: 'Stores each issue and its vectors in one row', src: '/assets/tech/postgresql.png' },
+      { name: 'Docker Compose', role: 'Runs the database in an isolated container', src: '/assets/tech/docker.png' },
+    ],
+  },
+  {
+    group: 'iObeya integration',
+    items: [
+      { name: 'Vue.js', version: '3', role: 'NextGen front end, hosts the similar-issues panel', src: '/assets/tech/vuejs.png' },
+      { name: 'Node.js', role: 'Existing NextGen backend', src: '/assets/tech/nodejs.png' },
+    ],
+  },
+  {
+    group: 'Tooling',
+    items: [
+      { name: 'Git', role: 'Version control', src: '/assets/tech/git.png' },
+      { name: 'Visual Studio Code', role: 'Main code editor', src: '/assets/tech/vscode.png' },
+    ],
+  },
 ]
 
 /* ========================== CONTEXT ========================== */
@@ -107,11 +132,11 @@ export type FieldWeight = {
 }
 
 export const fieldWeights: FieldWeight[] = [
-  { key: 'what', label: 'What', weight: 0.32, kind: 'semantic', why: 'The nature of the problem — the primary discriminator' },
+  { key: 'what', label: 'What', weight: 0.32, kind: 'semantic', why: 'The nature of the problem: the primary discriminator' },
   { key: 'why', label: 'Why / Impact', weight: 0.2, kind: 'semantic', why: 'Same consequence usually means the same problem' },
   { key: 'how', label: 'How', weight: 0.15, kind: 'semantic', why: 'How the failure showed up or was detected' },
   { key: 'where', label: 'Where', weight: 0.1, kind: 'semantic', why: 'Same line or zone raises the odds of a shared cause' },
-  { key: 'who', label: 'Who', weight: 0.06, kind: 'semantic', why: 'Deliberately low — the observer does not define the problem' },
+  { key: 'who', label: 'Who', weight: 0.06, kind: 'semantic', why: 'Deliberately low: the observer does not define the problem' },
   { key: 'howMany', label: 'How many', weight: 0.05, kind: 'numeric', why: 'Compared as a ratio, not a difference' },
   { key: 'rootCause', label: 'Root cause', weight: 0.05, kind: 'semantic', why: 'Known only after analysis, so rarely in a query' },
   { key: 'when', label: 'When', weight: 0.04, kind: 'temporal', why: 'Time proximity, not text proximity' },
@@ -145,5 +170,5 @@ export const futureWork = [
   { title: 'Real-world corpus', detail: 'Evaluate on production history across several rooms and sites.' },
   { title: 'Expert-annotated relevance', detail: 'Replace derived ground truth with Lean-practitioner judgement.' },
   { title: 'Hybrid retrieval', detail: 'Add keyword matching to catch part codes and machine IDs.' },
-  { title: 'Scale-up indexing', detail: 'Re-evaluate approximate vector indexing — measuring recall first.' },
+  { title: 'Scale-up indexing', detail: 'Re-evaluate approximate vector indexing, measuring recall first.' },
 ]

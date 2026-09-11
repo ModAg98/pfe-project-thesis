@@ -239,7 +239,7 @@ export function PresentationShell() {
             data-scrollable
           >
             <div className="mx-auto max-w-[1180px] px-12 py-14">
-              <div className="kicker mb-8">Overview — press O or Esc to close</div>
+              <div className="kicker mb-8">Overview · press O or Esc to close</div>
               <div className="grid grid-cols-4 gap-3">
                 {sections.map((s, i) => (
                   <button
