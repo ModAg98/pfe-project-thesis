@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: #ffffff;
+}
+
+body {
+  font-family: 'Inter', 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif;
+  color: #14172a;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+::selection {
+  background: rgba(122, 79, 208, 0.22);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 101, 128, 0.28) transparent;
+}
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(92, 101, 128, 0.28);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-surface-line bg-white shadow-card;
+  }
+  .kicker {
+    @apply font-mono text-[11px] font-semibold uppercase tracking-ultra text-brand-violet;
+  }
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[13px] font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-grad {
+    background: linear-gradient(120deg, #2342ce 0%, #7b4fd0 60%, #9a66d9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .dots {
+    background-image: radial-gradient(rgba(35, 66, 206, 0.13) 1.4px, transparent 1.4px);
+    background-size: 22px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
