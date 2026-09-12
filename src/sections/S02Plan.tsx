@@ -7,7 +7,7 @@ const plan = [
   { n: '02', label: 'The problem', detail: 'The knowledge exists. Nobody can find it', tone: 'violet' },
   { n: '03', label: 'The solution', detail: 'Search by meaning, see it work, how it is built', tone: 'sky' },
   { n: '04', label: 'What makes it different', detail: 'Built around Lean 5W2H, grounded AI', tone: 'violet' },
-  { n: '05', label: 'Results', detail: 'What we measured, and what is next', tone: 'blue' },
+  { n: '05', label: 'Conclusion', detail: 'What we built, and what is next', tone: 'blue' },
 ]
 
 const tones: Record<string, string> = {

@@ -30,7 +30,7 @@ export const jury = [
 export const assets = {
   iobeyaLogo: '/assets/iobeya-logo.png' as string | null,
   gembaLogo: '/assets/gemba-logo.jpg' as string | null,
-  schoolLogo: '/assets/school-logo.jpeg' as string | null, // drop the Polytech logo in and point here
+  schoolLogo: '/assets/school-logo.png' as string | null, // drop the Polytech logo in and point here
   problemVideo: '/assets/problem-video.mp4',
   buriedGif: '/assets/buried-in-issues.gif',
   gembaScene: '/assets/gemba-walk-scene.png',

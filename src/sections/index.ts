@@ -15,7 +15,6 @@ import { S12RAG } from './S12RAG'
 import { S13RAGGenerate } from './S13RAGGenerate'
 import { S10FiveW2H } from './S10FiveW2H'
 import { S11Grounded } from './S11Grounded'
-import { S12Results } from './S12Results'
 import { S14Conclusion } from './S14Conclusion'
 import { S15End } from './S15End'
 
@@ -49,7 +48,6 @@ export const sections: SectionDef[] = [
   { id: 'rag-retrieve', title: 'RAG · Retrieval', steps: 5, minutes: 1.6, Component: S12RAG },
   { id: 'rag-generate', title: 'RAG · Generation', steps: 5, minutes: 1.3, Component: S13RAGGenerate },
   { id: 'grounded', title: 'Grounded AI', steps: 5, minutes: 1.2, Component: S11Grounded },
-  { id: 'results', title: 'Results', steps: 4, minutes: 1.4, Component: S12Results },
   { id: 'conclusion', title: 'Conclusion', steps: 3, minutes: 0.9, Component: S14Conclusion },
   { id: 'end', title: 'Thank you', steps: 1, minutes: 0.3, Component: S15End },
 ]
