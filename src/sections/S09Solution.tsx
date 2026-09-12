@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { AppFrame, Blobs, Clip } from '../components/Media'
+import { AppFrame, Blobs, Clip, TabletFrame } from '../components/Media'
 import { EASE, Reveal, Section, TitleBlock } from '../components/primitives'
 import { assets } from '../data/presentation'
 
@@ -9,6 +9,9 @@ const steps = [
     title: 'The problem is described once',
     body: 'The operator fills the 5W2H on the spot, exactly as they do today. Nothing new to learn.',
     clip: assets.clips.capture,
+    // near-square tablet recording: a browser frame would crop it
+    frame: 'tablet' as const,
+    aspect: 'aspect-[1080/1102]',
     label: 'Gemba Walk Assistant · reporting an issue',
     tone: 'blue',
   },
@@ -17,6 +20,8 @@ const steps = [
     title: 'One click finds what happened before',
     body: 'The system compares this issue to the whole history, by meaning, field by field, and ranks what matches.',
     clip: assets.clips.search,
+    frame: 'browser' as const,
+    aspect: 'aspect-[1840/1080]',
     label: 'Similar issues · 5W2H similarity search',
     tone: 'violet',
   },
@@ -25,6 +30,8 @@ const steps = [
     title: 'It hands back what actually worked',
     body: 'Root causes, proven solutions and a ready action plan, each line traced to the issue it came from.',
     clip: assets.clips.reuse,
+    frame: 'browser' as const,
+    aspect: 'aspect-[1840/1080]',
     label: 'AI summary and consolidated action plan',
     tone: 'sky',
   },
@@ -100,9 +107,18 @@ export function S09Solution({ step, active }: { step: number; active: boolean })
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.4, ease: EASE }}
             >
-              <AppFrame label={cur.label} className={`ring-4 ${tone.ring}`}>
-                <Clip src={cur.clip} active={active} className="aspect-[900/506] w-full" rounded="" />
-              </AppFrame>
+              {cur.frame === 'tablet' ? (
+                <div className="flex flex-col items-center">
+                  <TabletFrame className={`w-[600px] ring-4 ${tone.ring}`}>
+                    <Clip src={cur.clip} active={active} className={`${cur.aspect} w-full`} rounded="" />
+                  </TabletFrame>
+                  <div className="mt-4 font-mono text-[11px] font-medium tracking-wide text-ink-400">{cur.label}</div>
+                </div>
+              ) : (
+                <AppFrame label={cur.label} className={`ring-4 ${tone.ring}`}>
+                  <Clip src={cur.clip} active={active} className={`${cur.aspect} w-full`} rounded="" />
+                </AppFrame>
+              )}
             </motion.div>
           </AnimatePresence>
 

@@ -130,3 +130,20 @@ export function Blobs({ variant = 'a' }: { variant?: 'a' | 'b' | 'c' }) {
     </div>
   )
 }
+
+/** A tablet bezel around a near-square clip (portrait-ish recordings that a browser frame would crop). */
+export function TabletFrame({
+  children,
+  className = '',
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
+  return (
+    <div className={`relative overflow-hidden rounded-[34px] bg-ink-900 p-[14px] shadow-lift ${className}`}>
+      {/* front camera */}
+      <span className="absolute left-1/2 top-[5px] h-[5px] w-[5px] -translate-x-1/2 rounded-full bg-ink-700 ring-1 ring-ink-500/40" />
+      <div className="relative overflow-hidden rounded-[20px] bg-black">{children}</div>
+    </div>
+  )
+}
